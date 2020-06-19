@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 /**
  * This file is part of Hyperf.
  *
@@ -17,11 +18,20 @@ use Hyperf\Constants\Annotation\Constants;
 
 /**
  * @Constants
+ * @method static string getMessage(int $code, ...$message)
+ * @method static string getHttpCode(int $code)
  */
 class ErrorCode extends AbstractConstants
 {
     /**
+     * @Message("OK")
+     * @HttpCode(200)
+     */
+    const HTTP_OK = 200;
+
+    /**
      * @Message("Server Error！")
+     * @HttpCode(500)
      */
     const SERVER_ERROR = 500;
 }

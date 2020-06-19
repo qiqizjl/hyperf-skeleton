@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+
 /**
  * This file is part of Hyperf.
  *
@@ -59,6 +60,7 @@ return [
         ],
     ],
     'require-dev' => [
+        'naixiaoxin/hyperf-ide-helper' => '~1.0.0'
     ],
     'questions' => [
         'rpc' => [
@@ -124,25 +126,6 @@ return [
                     ],
                     'resources' => [
                         'resources/config_center/aliyun_acm.php' => 'config/autoload/aliyun_acm.php',
-                    ],
-                ],
-            ],
-        ],
-        'constants' => [
-            'question' => 'Do you want to use hyperf/constants component ?',
-            'default' => 'n',
-            'required' => false,
-            'force' => true,
-            'custom-package' => false,
-            'options' => [
-                1 => [
-                    'name' => 'yes',
-                    'packages' => [
-                        'hyperf/constants',
-                    ],
-                    'resources' => [
-                        'resources/constants/ErrorCode.php' => 'app/Constants/ErrorCode.php',
-                        'resources/constants/BusinessException.php' => 'app/Exception/BusinessException.php',
                     ],
                 ],
             ],
@@ -237,6 +220,21 @@ return [
                     'resources' => [
                         'resources/tracer/opentracing.php' => 'config/autoload/opentracing.php',
                     ],
+                ],
+            ],
+        ],
+        'ide-helper' => [
+            'question' => 'Do you want to use naixiaoxin/hyperf-ide-helper component ? ',
+            'default' => 'n',
+            'required' => false,
+            'force' => true,
+            'custom-package' => true,
+            'options' => [
+                1 => [
+                    'name' => 'yes',
+                    'packages' => [
+                        'naixiaoxin/hyperf-ide-helper',
+                    ]
                 ],
             ],
         ],

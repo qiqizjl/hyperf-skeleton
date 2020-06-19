@@ -19,7 +19,7 @@ return PhpCsFixer\Config::create()
         'header_comment' => [
             'commentType' => 'PHPDoc',
             'header' => $header,
-            'separate' => 'none',
+            'separate' => 'both',
             'location' => 'after_declare_strict',
         ],
         'array_syntax' => [
@@ -78,12 +78,15 @@ return PhpCsFixer\Config::create()
         'single_quote' => true,
         'standardize_not_equals' => true,
         'multiline_comment_opening_closing' => true,
+        'single_blank_line_before_namespace'=>true,
+        'no_blank_lines_before_namespace'=>false
     ])
     ->setFinder(
         PhpCsFixer\Finder::create()
             ->exclude('public')
             ->exclude('runtime')
             ->exclude('vendor')
+            ->exclude('_ide_helper_models.php')
             ->in(__DIR__)
     )
     ->setUsingCache(false);

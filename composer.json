@@ -1,5 +1,5 @@
 {
-    "name": "hyperf/hyperf-skeleton",
+    "name": "naixiaoxin/hyperf-skeleton",
     "type": "project",
     "keywords": [
         "php",
@@ -24,7 +24,8 @@
         "hyperf/logger": "~1.1.0",
         "hyperf/memory": "~1.1.0",
         "hyperf/process": "~1.1.0",
-        "hyperf/redis": "~1.1.0"
+        "hyperf/redis": "~1.1.0",
+        "hyperf/constants":"~1.1.0"
     },
     "require-dev": {
         "swoole/ide-helper": "^4.4",
