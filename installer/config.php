@@ -58,9 +58,12 @@ return [
         'hyperf/service-governance' => [
             'version' => '~1.1.0',
         ],
+        'naixiaoxin/hyperf-ide-helper' => [
+            'version' => '~1.0.0',
+        ],
     ],
     'require-dev' => [
-        'naixiaoxin/hyperf-ide-helper' => '~1.0.0'
+        'naixiaoxin/hyperf-ide-helper',
     ],
     'questions' => [
         'rpc' => [
@@ -234,7 +237,9 @@ return [
                     'name' => 'yes',
                     'packages' => [
                         'naixiaoxin/hyperf-ide-helper',
-                    ]
+                    ],
+                    'resources' => [
+                    ],
                 ],
             ],
         ],
