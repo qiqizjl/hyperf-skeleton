@@ -51,8 +51,13 @@ WORKDIR /opt/www
 # COPY ./composer.* /opt/www/
 # RUN composer install --no-dev --no-scripts
 
+ENV TIMEZONE=${timezone:-"Asia/Shanghai"} \
+    APP_ENV=prod \
+    SCAN_CACHEABLE=(true)
+
+
 COPY . /opt/www
-RUN composer install --no-dev -o
+RUN composer install --no-dev -o  && php bin/hyperf.php
 
 EXPOSE 9501
 

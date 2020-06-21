@@ -28,4 +28,6 @@ return [
             LogLevel::WARNING,
         ],
     ],
+    'app_env' => env('APP_ENV', 'dev'),
+    'scan_cacheable' => env('SCAN_CACHEABLE', false),
 ];

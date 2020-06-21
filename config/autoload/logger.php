@@ -24,9 +24,11 @@ return [
             'class' => Monolog\Formatter\LineFormatter::class,
             'constructor' => [
                 'format' => null,
-                'dateFormat' => null,
+                'dateFormat' => 'Y-m-d H:i:s',
                 'allowInlineLineBreaks' => true,
             ],
+        ],
+        'processors' => [
         ],
     ],
 ];
